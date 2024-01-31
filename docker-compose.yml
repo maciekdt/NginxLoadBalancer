@@ -1,0 +1,25 @@
+services:
+  nginx:
+    image: nginx-proxy
+    ports:
+      - "80:80"
+    networks:
+      - my-network
+
+  nodeapp1:
+    image: node-app
+    networks:
+      - my-network
+
+  nodeapp2:
+    image: node-app
+    networks:
+      - my-network
+
+  nodeapp3:
+    image: node-app
+    networks:
+      - my-network
+
+networks:
+  my-network:
